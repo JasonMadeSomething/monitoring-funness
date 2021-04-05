@@ -1,5 +1,6 @@
 component: aws-iam-role
 name: permissions
+app: monitoring-experiment
 
 inputs:
   name: ${name}-${stage}

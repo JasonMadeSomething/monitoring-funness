@@ -1,5 +1,6 @@
 component: website
 name: frontend
+app: monitoring-experiment
 
 inputs:
   # React application. "hook" runs before deployment to build the source code.  "dist" is the built artifact directory which is uploaded.

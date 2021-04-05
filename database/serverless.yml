@@ -1,5 +1,6 @@
 component: aws-dynamodb
 name: database
+app: monitoring-experiment
 
 inputs:
   name: ${name}-${stage}

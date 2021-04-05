@@ -40,7 +40,7 @@ class Home extends Component {
           { /* Hero Description */}
 
           <div className={`${styles.heroDescription}`}>
-            A serverless full-stack application built with AWS Lambda, AWS HTTP API, Express.js, React & AWS DynamoDB.
+            A Portfolio by Jason Teitelman
           </div>
 
           { /* Call To Action */}
@@ -49,7 +49,7 @@ class Home extends Component {
 
             <Link to='/register'>
               <button className={`buttonPrimaryLarge`}>
-                Register
+                register for full functionality
               </button>
             </Link>
 

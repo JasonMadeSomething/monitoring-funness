@@ -1,5 +1,7 @@
 component: express
 name: api
+app: monitoring-experiment
+
 
 inputs:
   # Express application source code.
