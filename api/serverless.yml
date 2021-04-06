@@ -9,7 +9,7 @@ inputs:
   # Permissions required for the AWS Lambda function to interact with other resources
   roleName: ${output:permissions.name}
   # Enable this when you want to set a custom domain.
-  domain: api.${env:domain}
+  domain: ${env:apidomain}
   # Environment variables
   env:
     # AWS DynamoDB Table name. Needed for the code to access it.
@@ -18,3 +18,4 @@ inputs:
     dbIndex1: ${output:database.indexes.gsi1.name}
     # A secret token to sign the JWT tokens with.
     tokenSecret: ${env:tokenSecret} # Change to secret via environment variable: ${env:tokenSecret}
+
