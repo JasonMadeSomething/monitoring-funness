@@ -4,7 +4,7 @@ import {
   withRouter,
 } from 'react-router-dom'
 import Loading from '../../fragments/Loading'
-import styles from './Auth.module.css'
+
 import {
   userRegister,
   userLogin,
@@ -126,42 +126,34 @@ class Auth extends Component {
   render() {
 
     return (
-      <div className={`${styles.container} animateFadeIn`}>
-        <div className={styles.containerInner}>
+      <div >
+        <div >
 
           { /* Logo */}
 
-          <Link to='/' className={`${styles.logo}`}>
-            <img
-              draggable='false'
-              src={'./fullstack-app-title.png'}
-              alt='serverless-fullstack-application'
-            />
+          <Link to='/' >
+            
           </Link>
 
           { /* Loading */}
 
           {this.state.loading && (
             <div>
-              {< Loading className={styles.containerLoading} />}
+              {< Loading  />}
             </div>
           )}
 
           { /* Registration Form */}
 
           {!this.state.loading && (
-            <div className={styles.formType}>
+            <div >
               <div
-                className={
-                  `${styles.formTypeRegister} 
-                ${this.state.state === 'register' ? styles.formTypeActive : ''}`}
+                
                 onClick={(e) => { this.handleFormTypeChange('register') }}>
                 Register
               </div>
               <div
-                className={
-                  `${styles.formTypeSignIn} 
-                ${this.state.state === 'login' ? styles.formTypeActive : ''}`}
+                
                 onClick={(e) => { this.handleFormTypeChange('login') }}>
                 Sign-In
               </div>
@@ -169,36 +161,36 @@ class Auth extends Component {
           )}
 
           {this.state.state === 'register' && !this.state.loading && (
-            <div className={styles.containerRegister}>
+            <div >
 
-              <form className={styles.form} onSubmit={this.handleFormSubmit}>
-                <div className={styles.formField}>
-                  <label className={styles.formLabel}>email</label>
+              <form  onSubmit={this.handleFormSubmit}>
+                <div >
+                  <label >email</label>
                   <input
                     type='text'
                     placeholder='yours@example.com'
-                    className={styles.formInput}
+                    
                     value={this.state.formEmail}
                     onChange={(e) => { this.handleFormInput('formEmail', e.target.value) }}
                   />
                 </div>
-                <div className={styles.formField}>
-                  <label className={styles.formLabel}>password</label>
+                <div >
+                  <label >password</label>
                   <input
                     type='password'
                     placeholder='your password'
-                    className={styles.formInput}
+                    
                     value={this.state.formPassword}
                     onChange={(e) => { this.handleFormInput('formPassword', e.target.value) }}
                   />
                 </div>
 
                 {this.state.formError && (
-                  <div className={styles.formError}>{this.state.formError}</div>
+                  <div >{this.state.formError}</div>
                 )}
 
                 <input
-                  className={`buttonPrimaryLarge ${styles.formButton}`}
+                  className={`buttonPrimaryLarge formButton`}
                   type='submit'
                   value='Register'
                 />
@@ -208,35 +200,35 @@ class Auth extends Component {
           )}
 
           {this.state.state === 'login' && !this.state.loading && (
-            <div className={styles.containerSignIn}>
+            <div >
 
-              <form className={styles.form} onSubmit={this.handleFormSubmit}>
-                <div className={styles.formField}>
-                  <label className={styles.formLabel}>email</label>
+              <form  onSubmit={this.handleFormSubmit}>
+                <div >
+                  <label >email</label>
                   <input
                     type='text'
                     placeholder='yours@example.com'
-                    className={styles.formInput}
+                    
                     value={this.state.formEmail}
                     onChange={(e) => { this.handleFormInput('formEmail', e.target.value) }}
                   />
                 </div>
-                <div className={styles.formField}>
-                  <label className={styles.formLabel}>password</label>
+                <div >
+                  <label >password</label>
                   <input
                     type='password'
                     placeholder='your password'
-                    className={styles.formInput}
+                    
                     value={this.state.formPassword}
                     onChange={(e) => { this.handleFormInput('formPassword', e.target.value) }}
                   />
                 </div>
 
                 {this.state.formError && (
-                  <div className={styles.formError}>{this.state.formError}</div>
+                  <div >{this.state.formError}</div>
                 )}
 
-                <input className={`buttonPrimaryLarge ${styles.formButton}`} type='submit' value='Sign In' />
+                <input className={`buttonPrimaryLarge formButton`} type='submit' value='Sign In' />
               </form>
             </div>
           )}
