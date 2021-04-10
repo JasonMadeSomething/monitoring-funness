@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './Loading.module.css'
+
 
 export default class Loading extends Component {
 
@@ -13,7 +13,7 @@ export default class Loading extends Component {
   render() {
     return (
       <div className={`${this.props.className}`}>
-        <div className={`${styles.container}`}>
+        <div >
 
           <img
             draggable={false}
