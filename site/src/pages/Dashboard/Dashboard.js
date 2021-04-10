@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { 
   withRouter 
 } from 'react-router-dom'
-import styles from './Dashboard.module.css'
+
 import {
   getSession,
   deleteSession 
@@ -38,12 +38,12 @@ class Dashboard extends Component {
   render() {
 
     return (
-      <div className={`${styles.container} animateFadeIn`}>
-        <div className={styles.containerInner}>
+      <div >
+        <div >
 
           { /* Navigation */ }
 
-          <div className={styles.navigationContainer}>
+          <div >
             <div 
               className={`link`}>
                 { this.state.session ? this.state.session.userEmail : '' }
@@ -57,17 +57,13 @@ class Dashboard extends Component {
 
           { /* Content */ }
 
-          <div className={`${styles.contentContainer}`}>
+          <div >
 
-            <div className={`${styles.artwork} animateFlicker`}>
-              <img 
-                draggable='false'
-                src={'./fullstack-app-artwork.png'} 
-                alt='serverless-fullstack-application' 
-              />
+            <div >
+              
             </div>
 
-            <div className={`${styles.welcomeMessage}`}>
+            <div >
               Welcome to your serverless fullstack dashboard...
             </div>
 
