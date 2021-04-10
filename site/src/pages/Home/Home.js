@@ -3,7 +3,8 @@ import {
   Link,
   withRouter
 } from 'react-router-dom'
-import styles from './Home.module.css'
+import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron'
 
 class Home extends Component {
 
@@ -17,46 +18,36 @@ class Home extends Component {
   render() {
 
     return (
-      <div className={`${styles.container} animateFadeIn`}>
-        <div className={styles.containerInner}>
+      <Jumbotron >
+        <div >
 
           { /* Hero Artwork */}
 
-          <div className={`${styles.heroArtwork} animateFlicker`}>
-            <img
-              draggable='false'
-              src={'./fullstack-app-artwork.png'}
-              alt='serverless-fullstack-application'
-            />
+          <div  >
+            
           </div>
-          <div className={`${styles.heroTitle}`}>
-            <img
-              draggable='false'
-              src={'./fullstack-app-title.png'}
-              alt='serverless-fullstack-application'
-            />
+          <div >
+            
           </div>
 
           { /* Hero Description */}
 
-          <div className={`${styles.heroDescription}`}>
+          <div >
             A Portfolio by Jason Teitelman
           </div>
 
           { /* Call To Action */}
 
-          <div className={`${styles.containerCta}`}>
+          <div >
 
             <Link to='/register'>
-              <button className={`buttonPrimaryLarge`}>
-                register for full functionality
-              </button>
+              <Button variant="dark">
+                Pre-register
+              </Button>
             </Link>
-
-            <Link to='/login' className={`${styles.linkSignIn}`}>sign-in</Link>
           </div>
         </div>
-      </div>
+      </Jumbotron>
     )
   }
 }
