@@ -19,32 +19,24 @@ class Home extends Component {
 
     return (
       <Jumbotron >
-        <div >
-
-          { /* Hero Artwork */}
-
-          <div  >
-            
-          </div>
-          <div >
-            
-          </div>
-
-          { /* Hero Description */}
-
-          <div >
-            A Portfolio by Jason Teitelman
-          </div>
+        <div class="row justify-content-center">
 
           { /* Call To Action */}
 
           <div >
-
+            <div class="text-center">
+              <p>
+              A Portfolio by Jason Teitelman
+              </p>
+            </div>
+            <div class="text-center">
             <Link to='/register'>
               <Button variant="dark">
                 Pre-register
               </Button>
             </Link>
+            </div>
+            
           </div>
         </div>
       </Jumbotron>
