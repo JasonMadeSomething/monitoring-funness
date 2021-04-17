@@ -15,13 +15,7 @@ export default class Loading extends Component {
       <div className={`${this.props.className}`}>
         <div >
 
-          <img
-            draggable={false}
-            alt={`Loading`}
-            src={
-              'https://s3.amazonaws.com/dashboard.serverless.com/images/icon-serverless-framework.png'
-            }
-          />
+          
 
           <p>loading...</p>
 
