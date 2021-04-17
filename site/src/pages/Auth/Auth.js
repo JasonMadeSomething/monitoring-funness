@@ -3,7 +3,12 @@ import {
   Link,
   withRouter,
 } from 'react-router-dom'
+
 import Loading from '../../fragments/Loading'
+import InputGroup from 'react-bootstrap/InputGroup'
+import Button from 'react-bootstrap/Button'
+import FormControl from 'react-bootstrap/FormControl'
+import Form from 'react-bootstrap/Form'
 
 import {
   userRegister,
@@ -163,73 +168,86 @@ class Auth extends Component {
           {this.state.state === 'register' && !this.state.loading && (
             <div >
 
-              <form  onSubmit={this.handleFormSubmit}>
-                <div >
-                  <label >email</label>
-                  <input
+              <Form  onSubmit={this.handleFormSubmit}>
+                <InputGroup>
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>Email</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
                     type='text'
                     placeholder='yours@example.com'
-                    
                     value={this.state.formEmail}
                     onChange={(e) => { this.handleFormInput('formEmail', e.target.value) }}
                   />
-                </div>
-                <div >
-                  <label >password</label>
-                  <input
+
+                </InputGroup>
+                <InputGroup >
+                <InputGroup.Prepend>
+                    <InputGroup.Text>Password</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
                     type='password'
                     placeholder='your password'
-                    
                     value={this.state.formPassword}
                     onChange={(e) => { this.handleFormInput('formPassword', e.target.value) }}
                   />
-                </div>
+                </InputGroup>
 
                 {this.state.formError && (
                   <div >{this.state.formError}</div>
                 )}
 
-                <input
-                  className={`buttonPrimaryLarge formButton`}
-                  type='submit'
-                  value='Register'
-                />
+                <Button
+                  variant="primary"
+                  type="submit"
+                  value="Register"
+                  disabled={this.state.loading}
+                >Register</Button>
 
-              </form>
+              </Form>
             </div>
           )}
 
           {this.state.state === 'login' && !this.state.loading && (
             <div >
 
-              <form  onSubmit={this.handleFormSubmit}>
-                <div >
-                  <label >email</label>
-                  <input
+              <Form  onSubmit={this.handleFormSubmit}>
+              <InputGroup>
+                  <InputGroup.Prepend>
+                    <InputGroup.Text>Email</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
                     type='text'
                     placeholder='yours@example.com'
-                    
                     value={this.state.formEmail}
                     onChange={(e) => { this.handleFormInput('formEmail', e.target.value) }}
                   />
-                </div>
-                <div >
-                  <label >password</label>
-                  <input
+
+                </InputGroup>
+                <InputGroup >
+                <InputGroup.Prepend>
+                    <InputGroup.Text>Password</InputGroup.Text>
+                  </InputGroup.Prepend>
+                  <FormControl
                     type='password'
                     placeholder='your password'
-                    
                     value={this.state.formPassword}
                     onChange={(e) => { this.handleFormInput('formPassword', e.target.value) }}
                   />
-                </div>
+                </InputGroup>
 
                 {this.state.formError && (
                   <div >{this.state.formError}</div>
                 )}
 
-                <input className={`buttonPrimaryLarge formButton`} type='submit' value='Sign In' />
-              </form>
+                
+                <Button
+                  variant="primary"
+                  type="submit"
+                  value="Sign In"
+                  disabled={this.state.loading}
+                >Sign In</Button>
+              </Form>
             </div>
           )}
         </div>
